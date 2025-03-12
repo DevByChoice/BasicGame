@@ -46,19 +46,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Boss.cs" />
-    <Compile Include="Enemy.cs" />
+    <Compile Include="Enemies\Magic\BossCharacters\Boss1Mag.cs" />
+    <Compile Include="Enemies\Magic\BossCharacters\Boss2Mag.cs" />
+    <Compile Include="Enemies\Magic\BossCharacters\Boss3Mag.cs" />
+    <Compile Include="Enemies\Magic\BossCharacters\Boss4Mag.cs" />
+    <Compile Include="Enemies\Magic\BossCharacters\Boss5Mag.cs" />
+    <Compile Include="Enemies\Melee\BossCharacters\Boss2Mel.cs" />
+    <Compile Include="Enemies\Melee\BossCharacters\Boss3Mel.cs" />
+    <Compile Include="Enemies\Melee\BossCharacters\Boss4Mel.cs" />
+    <Compile Include="Enemies\Melee\BossCharacters\Boss5Mel.cs" />
+    <Compile Include="Enemies\Melee\BossCharacters\Boss1Mel.cs" />
+    <Compile Include="Enemies\Enemy.cs" />
+    <Compile Include="Enemies\Ranged\BossCharacters\Boss1Ran.cs" />
+    <Compile Include="Enemies\Ranged\BossCharacters\Boss2Ran.cs" />
+    <Compile Include="Enemies\Ranged\BossCharacters\Boss3Ran.cs" />
+    <Compile Include="Enemies\Ranged\BossCharacters\Boss4Ran.cs" />
+    <Compile Include="Enemies\Ranged\BossCharacters\Boss5Ran.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Magic.cs" />
-    <Compile Include="Melee.cs" />
+    <Compile Include="Enemies\Magic\Magic.cs" />
+    <Compile Include="Enemies\Melee\Melee.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Ranged.cs" />
+    <Compile Include="Enemies\Ranged\Ranged.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -80,6 +94,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Enemies\Melee\Close\" />
+    <Folder Include="Enemies\Melee\Far\" />
+    <Folder Include="Enemies\Melee\Mixed\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

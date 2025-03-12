@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace BasicGame
 {
-    internal class Boss
+    internal class Boss5Mag : Melee
     {
+        protected string[] Abilities {  get; set; }
+        protected string[] Weaknesses { get; set; }
     }
 }
