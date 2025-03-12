@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace BasicGame
 {
-    internal class Melee : Enemy
+    internal class Boss
     {
-        
     }
 }
