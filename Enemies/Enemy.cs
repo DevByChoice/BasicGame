@@ -26,14 +26,17 @@ namespace BasicGame
             }
                 return Path;
         }
-        public float Attack(float damage, float shield, float damageReduction)
+        public void Attack(PlayerCharacter.PlayerCharacter Player, float damage, float damageReduction)
         {
+            float sheild = Player.GetSheilds();
+            float health = Player.GetHealth();
             float impact = 0;
             damage = (damage / 100) * damageReduction;
-            if (damage < shield) { impact = 0; }
+            if (damage < sheild) { impact = 0; }
             else if (damage < 1) { impact = 0; }
-            else { impact = shield - damage; }
-            return impact;
+            else { impact = sheild - damage; }
+            float NewHeath = impact;
+            Player.TakeDamage( Player, NewHeath);
         }
     }
 }

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Armoury.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Armoury.Designer.cs">
+      <DependentUpon>Armoury.cs</DependentUpon>
+    </Compile>
     <Compile Include="Enemies\Magic\BossCharacters\Boss1Mag.cs" />
     <Compile Include="Enemies\Magic\BossCharacters\Boss2Mag.cs" />
     <Compile Include="Enemies\Magic\BossCharacters\Boss3Mag.cs" />
@@ -70,9 +76,16 @@
     </Compile>
     <Compile Include="Enemies\Magic\Magic.cs" />
     <Compile Include="Enemies\Melee\Melee.cs" />
+    <Compile Include="PlayerCharacter\PlayerCharacter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Enemies\Ranged\Ranged.cs" />
+    <EmbeddedResource Include="Armoury.resx">
+      <DependentUpon>Armoury.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -96,9 +109,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Enemies\Magic\Close\" />
+    <Folder Include="Enemies\Magic\Far\" />
+    <Folder Include="Enemies\Magic\Mixed\" />
     <Folder Include="Enemies\Melee\Close\" />
     <Folder Include="Enemies\Melee\Far\" />
     <Folder Include="Enemies\Melee\Mixed\" />
+    <Folder Include="PlayerCharacter\Gear\" />
+    <Folder Include="PlayerCharacter\Pets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Level\Background\Background.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PlayerCharacter\Characters\First\Barbarian-Wood-Leather-.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
